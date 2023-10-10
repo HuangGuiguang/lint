@@ -2,12 +2,9 @@
 import { ref } from 'vue';
 
 defineProps({
-    msg: String,
+    msg: String
 });
-const test = {
-    aaa: 1
-}
-const count = ref('1')
+const count = ref('1');
 </script>
 
 <template>
