@@ -1,4 +1,4 @@
-// 在新的vite + vue中因为"type": "module", 所以文件名需要以cjs来结尾
+// 如果package.json中"type": "module", 文件名需要以cjs来结尾
 // 修改配置后重启vscode
 module.exports = {
     semi: false, // 强制在语句末尾使用分号。

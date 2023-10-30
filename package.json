@@ -1,33 +1,39 @@
 {
-  "name": "code-limit-vue-app",
-  "private": true,
+  "name": "lint",
   "version": "0.0.0",
-  "type": "module",
+  "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
     "prepare": "husky install",
     "commit": "git-cz"
   },
   "dependencies": {
-    "uninstall": "^0.0.0",
-    "vue": "^3.3.4"
+    "pinia": "^2.1.6",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "@typescript-eslint/parser": "^6.7.5",
-    "@vitejs/plugin-vue": "^4.2.3",
+    "@tsconfig/node18": "^18.2.2",
+    "@types/node": "^18.17.17",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "@vue/tsconfig": "^0.4.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.51.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-vue": "^9.17.0",
+    "eslint": "^8.52.0",
+    "eslint-plugin-vue": "^9.18.1",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
-    "prettier": "^3.0.3",
-    "vite": "^4.4.5"
+    "lint-staged": "^15.0.2",
+    "npm-run-all2": "^6.0.6",
+    "typescript": "~5.2.0",
+    "vite": "^4.4.9",
+    "vue-tsc": "^1.8.11"
   },
   "config": {
     "commitizen": {
@@ -35,7 +41,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,vue}": [
+    "src/**/*.{js,jsx,ts,vue}": [
       "prettier --write",
       "eslint --fix"
     ]
