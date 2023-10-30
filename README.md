@@ -14,7 +14,7 @@ npm i eslint
 npm init @eslint/config
 ```
 
-![eslint规则自定义初始化](.\static\eslint规则自定义初始化.png)
+![eslint规则自定义初始化](https://cdn.jsdelivr.net/gh/HuangGuiguang/cdn@1.0.1/eslint-husky/eslint规则自定义初始化.png)
 
 ## 安装 husky
 
@@ -143,10 +143,10 @@ npm run commit
 
 ```
 
-![git-cz提交流程](.\static\git-cz提交流程.png)
+![git-cz提交流程](https://cdn.jsdelivr.net/gh/HuangGuiguang/cdn@1.0.1/eslint-husky/git-cz提交流程.png)
 
 ## 解决 prettier 和 eslint 的冲突
 
 本质上是用 prettier 覆盖 eslint 的规则
 
-![解决eslint和prettierr的冲突（覆盖eslint的配置，见仁见智）](\static\解决eslint和prettierr的冲突（覆盖eslint的配置，见仁见智）.png)
+![解决eslint和prettierr的冲突（覆盖eslint的配置，见仁见智）](https://cdn.jsdelivr.net/gh/HuangGuiguang/cdn@1.0.1/eslint-husky/解决eslint和prettierr的冲突（覆盖eslint的配置，见仁见智）.png)
